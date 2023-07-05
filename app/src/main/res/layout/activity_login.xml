@@ -20,7 +20,7 @@
             android:padding="27dp">
 
             <EditText
-                android:id="@+id/signup_email"
+                android:id="@+id/login_email"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
@@ -32,7 +32,7 @@
                 android:textColor="@color/grey" />
 
             <EditText
-                android:id="@+id/signup_password"
+                android:id="@+id/login_password"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
@@ -45,17 +45,16 @@
                 android:textColor="@color/grey" />
 
             <Button
-                android:id="@+id/signup_button"
+                android:id="@+id/login_button"
                 android:layout_width="340dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:cornerRadius="30dp"
                 android:text="Iniciar Sesión"
                 android:textSize="18sp"
                 android:padding="8dp"/>
 
             <TextView
-                android:id="@+id/loginRedirectText"
+                android:id="@+id/signupRedirectText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -66,11 +65,10 @@
                 android:textSize="18sp"/>
 
             <Button
-                android:id="@+id/signupinvitado_button"
+                android:id="@+id/logininvitado_button"
                 android:layout_width="340dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:cornerRadius="30dp"
                 android:text="Iniciar como invitado"
                 android:textSize="18sp"
                 android:padding="8dp"/>
