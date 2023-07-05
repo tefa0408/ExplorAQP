@@ -12,6 +12,16 @@
             android:title="Inicio"/>
 
         <item
+            android:id="@+id/nav_cercami"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Cerca de Mi"/>
+
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/ic_baseline_favorite_border_24"
+            android:title="Favoritos"/>
+
+        <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_baseline_settings_24"
             android:title="Configuraciòn"/>
@@ -20,6 +30,7 @@
             android:id="@+id/nav_aboutthis"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="Sobre Nosotros"/>
+
 
         <item
             android:title="">
