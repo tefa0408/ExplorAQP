@@ -1,12 +1,15 @@
 package com.example.ges_touristapp
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.ges_touristapp.databinding.ActivityLoginBinding
 import com.example.ges_touristapp.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
             if(email.isNotEmpty() && password.isNotEmpty() ){
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
-                        val intent = Intent(this, MapsActivity::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }else{
                         Toast.makeText(this, it.exception.toString() , Toast.LENGTH_SHORT).show()
@@ -37,6 +40,12 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show()
             }
 
+        }
+
+
+        binding.logininvitadoButton.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         binding.signupRedirectText.setOnClickListener{

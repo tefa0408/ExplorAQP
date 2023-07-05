@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Inicio"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Configuraciòn"/>
+
+        <item
+            android:id="@+id/nav_aboutthis"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="Sobre Nosotros"/>
+
+        <item
+            android:title="">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_baseline_logout_24"
+                    android:title="Cerrar Sesiòn"/>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>
