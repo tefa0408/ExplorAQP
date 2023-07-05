@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "672171063604",
+    "firebase_url": "https://touristapp-2023-default-rtdb.firebaseio.com",
+    "project_id": "touristapp-2023",
+    "storage_bucket": "touristapp-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672171063604:android:146cd2f561432260dd0d61",
+        "android_client_info": {
+          "package_name": "com.example.ges_touristapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672171063604-1kcig35f9mk6v819s2199gimdm143hcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEfyDPOISC5nlMvKOM99N3RXrutBzLht0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672171063604-1kcig35f9mk6v819s2199gimdm143hcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
