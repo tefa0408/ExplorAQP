@@ -13,13 +13,14 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+//import com.google.firebase.auth.FirebaseAuth
+//import com.google.firebase.auth.FirebaseUser
+//import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var firebaseAuth: FirebaseAuth
+    //private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var navView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +28,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        firebaseAuth = FirebaseAuth.getInstance()
-        drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        //firebaseAuth = FirebaseAuth.getInstance()
+
+
+        //val database = FirebaseDatabase.getInstance()
+        //val databaseReference = database.reference
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener (this)
@@ -43,7 +49,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if(savedInstanceState == null){
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, InicioFragment()).commit()
-            navigationView.setCheckedItem(R.id.nav_home)
+            navigationView.setCheckedItem(
+                R.id.nav_home
+            )
         }
 
     }
