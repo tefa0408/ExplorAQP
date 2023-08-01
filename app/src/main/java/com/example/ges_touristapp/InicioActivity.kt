@@ -38,7 +38,7 @@ class InicioActivity : AppCompatActivity() {
         //Extraer la ata de firebase
 
     }
-
+//.
     private fun saveLugarData(){
 
         val lugar_name =  binding.lugar.text.toString()
