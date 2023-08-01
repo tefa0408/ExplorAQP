@@ -1,14 +1,25 @@
 package com.example.ges_touristapp
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.ges_touristapp.Models.Favoritos
+import com.example.ges_touristapp.Models.LugaresModel
 import com.example.ges_touristapp.databinding.FragmentInicioBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.InputStream
+import java.util.*
 
 class InicioFragment : Fragment() {
 
@@ -26,20 +37,26 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Lugar")
+        dbRef = FirebaseDatabase.getInstance().getReference("Favoritos")
 
         binding.guardarButton.setOnClickListener {
             saveLugarData()
+        }
+
+        binding.btnSelectImage.setOnClickListener {
+            //seleccionarImagen()
         }
 
         // Extraer los datos de Firebase (si es necesario)
     }
 
     private fun saveLugarData() {
-        val lugar_name = binding.lugar.text.toString()
+        val lugar_nameF = binding.lugar.text.toString()
+        val lugar_direccionF = binding.direccion.text.toString()
+        val lugar_imagenF = binding.btnSelectImage.urls.toString()
         val idLugar = dbRef.push().key!!
 
-        val lugarData = LugaresModel(idLugar, lugar_name)
+        val lugarData = Favoritos(idLugar, lugar_nameF, lugar_direccionF, 0.0,0.0,lugar_imagenF)
 
         dbRef.child(idLugar).setValue(lugarData)
             .addOnCompleteListener {
@@ -48,6 +65,7 @@ class InicioFragment : Fragment() {
                 Toast.makeText(requireContext(), "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
     }
+
 
     private fun fetchLugaresData() {
         // Implementar la lógica para extraer datos de Firebase (si es necesario)

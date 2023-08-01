@@ -23,9 +23,25 @@
         android:inputType="textPersonName"
         android:hint="Enter lugar"/>
 
+    <EditText
+        android:id="@+id/direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter direccion"/>
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Seleccionar imagen" />
+
     <Button
         android:id="@+id/guardar_button"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar Aqui" />
@@ -36,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Loading Data..."
         android:textSize="30sp"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="250dp"/>
 
 
 </FrameLayout>

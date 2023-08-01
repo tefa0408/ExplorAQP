@@ -1,6 +1,6 @@
-package com.example.ges_touristapp
+package com.example.ges_touristapp.Models
 
-class LugaresModel (
+data class LugaresModel (
 
     var id: String? = null,
     var lugar_name: String? = null,

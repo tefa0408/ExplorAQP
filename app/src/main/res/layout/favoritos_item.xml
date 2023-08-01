@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat = "tools:sample/favoritos"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|bottom"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/lugarFavoritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8c000000"
+            android:paddingLeft="10dp"
+
+            android:text="Monasterio de Santa Catalina "
+            android:textColor="#ffe3e3e3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/direccionFavoritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8c000000"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Santa Catalina 301, Arequipa"
+            android:textColor="#ffe3e3e3"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+

@@ -2,11 +2,10 @@ package com.example.ges_touristapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ges_touristapp.Models.LugaresModel
 import com.example.ges_touristapp.databinding.ActivityInicioBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
